@@ -60,7 +60,7 @@ FaceSet = TypedDict('FaceSet',
 FaceStore : TypeAlias = Dict[str, FaceSet]
 FaceTrack : TypeAlias = Dict[int, Face]
 
-Language = Literal['en']
+Language = Literal['en', 'zh-CN']
 Locales : TypeAlias = Dict[Language, Dict[str, Any]]
 LocalePoolSet : TypeAlias = Dict[str, Locales]
 

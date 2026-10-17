@@ -15,6 +15,8 @@ def main() -> int:
 
     env = os.environ.copy()
     env['GRADIO_ANALYTICS_ENABLED'] = 'False'
+    env.setdefault('FACEFUSION_LANGUAGE', 'zh-CN')
+    env['PYTHONUTF8'] = '1'
     if os.name == 'nt':
         cuda = env.get('CUDA_PATH')
         if cuda and (Path(cuda) / 'bin').is_dir():

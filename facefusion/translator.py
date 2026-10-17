@@ -1,10 +1,11 @@
 import importlib
+import os
 from typing import Optional
 
 from facefusion.types import Language, LocalePoolSet, Locales
 
 LOCALE_POOL_SET : LocalePoolSet = {}
-CURRENT_LANGUAGE : Language = 'en'
+CURRENT_LANGUAGE : Language = 'zh-CN' if os.getenv('FACEFUSION_LANGUAGE') == 'zh-CN' else 'en'
 
 
 def __autoload__(module_name : str) -> None:
@@ -16,6 +17,9 @@ def __autoload__(module_name : str) -> None:
 
 
 def load(__locales__ : Locales, module_name : str) -> None:
+	if 'zh-CN' not in __locales__:
+		from facefusion.locales_zh_cn import translate
+		__locales__ = { **__locales__, 'zh-CN': translate(__locales__['en']) }
 	LOCALE_POOL_SET[module_name] = __locales__
 
 

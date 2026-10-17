@@ -58,4 +58,17 @@ commands:
 Documentation
 -------------
 
+### 简体中文启动
+
+已配置项目虚拟环境和 NVIDIA CUDA 后，在项目目录运行：
+
+```powershell
+.\.venv\Scripts\python.exe start.py
+```
+
+`start.py` 默认使用简体中文界面和运行提示，并在服务就绪后打开浏览器。
+模型名称、命令参数及部分选项标识保留英文，便于与官方文档对应。
+如需切回英文，可在启动前设置 `$env:FACEFUSION_LANGUAGE = 'en'`。
+直接运行 `facefusion.py` 时，可通过 `$env:FACEFUSION_LANGUAGE = 'zh-CN'` 启用中文。
+
 Read the [documentation](https://docs.facefusion.io) for a deep dive.
