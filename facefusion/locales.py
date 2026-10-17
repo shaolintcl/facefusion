@@ -194,6 +194,7 @@ LOCALES : Locales =\
 		},
 		'uis':
 		{
+			'processors_hint': 'For video face swaps, start with Face swapper. Face enhancer and Expression restorer are optional.',
 			'apply_button': 'APPLY',
 			'benchmark_mode_dropdown': 'BENCHMARK MODE',
 			'benchmark_cycle_count_slider': 'BENCHMARK CYCLE COUNT',
@@ -268,6 +269,20 @@ LOCALES : Locales =\
 			'webcam_device_id_dropdown': 'WEBCAM DEVICE ID',
 			'webcam_mode_radio': 'WEBCAM MODE',
 			'webcam_resolution_dropdown': 'WEBCAM RESOLUTION'
+		},
+		'processors':
+		{
+			'age_modifier': 'Age modifier',
+			'background_remover': 'Background remover',
+			'deep_swapper': 'Deep swapper',
+			'expression_restorer': 'Expression restorer',
+			'face_debugger': 'Face debugger',
+			'face_editor': 'Face editor',
+			'face_enhancer': 'Face enhancer',
+			'face_swapper': 'Face swapper',
+			'frame_colorizer': 'Frame colorizer',
+			'frame_enhancer': 'Frame enhancer',
+			'lip_syncer': 'Lip syncer'
 		}
 	}
 }

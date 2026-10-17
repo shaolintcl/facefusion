@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import gradio
 
@@ -15,7 +15,8 @@ def render() -> None:
 
 	PROCESSORS_CHECKBOX_GROUP = gradio.CheckboxGroup(
 		label = translator.get('uis.processors_checkbox_group'),
-		choices = sort_processors(state_manager.get_item('processors')),
+		info = translator.get('uis.processors_hint'),
+		choices = get_processor_choices(state_manager.get_item('processors')),
 		value = state_manager.get_item('processors')
 	)
 	register_ui_component('processors_checkbox_group', PROCESSORS_CHECKBOX_GROUP)
@@ -35,7 +36,11 @@ def update_processors(processors : List[str]) -> gradio.CheckboxGroup:
 			return gradio.CheckboxGroup()
 
 	state_manager.set_item('processors', processors)
-	return gradio.CheckboxGroup(value = state_manager.get_item('processors'), choices = sort_processors(state_manager.get_item('processors')))
+	return gradio.CheckboxGroup(value = state_manager.get_item('processors'), choices = get_processor_choices(state_manager.get_item('processors')))
+
+
+def get_processor_choices(processors : List[str]) -> List[Tuple[str, str]]:
+	return [ (translator.get('processors.' + processor) or processor, processor) for processor in sort_processors(processors) ]
 
 
 def sort_processors(processors : List[str]) -> List[str]:

@@ -334,5 +334,17 @@
   "choose the model responsible for syncing the lips": "选择口型同步模型",
   "specify the degree of weight applied to the lips": "设置口型同步权重",
   "LIP SYNCER MODEL": "口型同步模型",
-  "LIP SYNCER WEIGHT": "口型同步权重"
+  "LIP SYNCER WEIGHT": "口型同步权重",
+  "Age modifier": "年龄调整",
+  "Background remover": "移除背景",
+  "Deep swapper": "专用模型换脸",
+  "Expression restorer": "表情恢复",
+  "Face debugger": "人脸检测调试",
+  "Face editor": "人脸编辑",
+  "Face enhancer": "人脸增强",
+  "Face swapper": "换脸",
+  "Frame colorizer": "黑白画面上色",
+  "Frame enhancer": "整帧画质增强",
+  "Lip syncer": "口型同步",
+  "For video face swaps, start with Face swapper. Face enhancer and Expression restorer are optional.": "视频换脸先勾选“换脸”；可按需添加“人脸增强”和“表情恢复”。"
 }
